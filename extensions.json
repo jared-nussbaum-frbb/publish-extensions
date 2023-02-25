@@ -423,7 +423,8 @@
   },
   "halcyontechltd.git-client-ibmi": {
     "repository": "https://github.com/halcyon-tech/git-client-ibmi",
-    "prepublish": "[ $VERSION = '0.1.0' ] && mv LICENCE LICENSE || true"
+    "prepublish": "[ $VERSION = '0.1.0' ] 
+    mv LICENCE LICENSE || true"
   },
   "halcyontechltd.vscode-ibmi-walkthroughs": {
     "repository": "https://github.com/halcyon-tech/vscode-ibmi-walkthroughs"
@@ -803,7 +804,7 @@
       "node --version",
       "python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt --no-user",
       "npm run clean",
-      "npm run package"
+      "npm run package",
       "source ~/.nvm/nvm.sh && nvm ls && nvm use system",
     ],
     "extensionFile": "ms-toolsai-jupyter-insiders.vsix",
