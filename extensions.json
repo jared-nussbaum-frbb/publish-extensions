@@ -800,7 +800,7 @@
       "npm ci",
       "node --version",
       "source ~/.nvm/nvm.sh && nvm ls && nvm use",
-      "node --version"
+      "node --version",
       "python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt --no-user",
       "npm run clean",
       "npm run package"
