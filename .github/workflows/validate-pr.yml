@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: "14.x"
       - run: npm install
-      - run: npm install --global vsce
+      - run: npm install --global @vscode/vsce
       - uses: actions/setup-python@v4
         with:
           python-version: "3.7"
-      - run: EXTENSIONS=$(node diff-extensions) node publish-extensions
+      - run: EXTENSIONS=ms-toolsai.jupyter node publish-extensions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: node report-extensions
