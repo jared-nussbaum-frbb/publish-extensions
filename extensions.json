@@ -798,9 +798,13 @@
     "repository": "https://github.com/microsoft/vscode-jupyter",
     "custom": [
       "npm ci",
+      "node --version",
+      "source ~/.nvm/nvm.sh && nvm ls && nvm use",
+      "node --version"
       "python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt --no-user",
       "npm run clean",
       "npm run package"
+      "source ~/.nvm/nvm.sh && nvm ls && nvm use system",
     ],
     "extensionFile": "ms-toolsai-jupyter-insiders.vsix",
     "timeout": 30
