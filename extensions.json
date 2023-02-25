@@ -797,6 +797,8 @@
   "ms-toolsai.jupyter": {
     "repository": "https://github.com/microsoft/vscode-jupyter",
     "custom": [
+      "source ~/.nvm/nvm.sh",
+      "nvm current",
       "node --version",
       "npm ci",
       "python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt --no-user",
