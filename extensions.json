@@ -798,6 +798,7 @@
     "repository": "https://github.com/microsoft/vscode-jupyter",
     "custom": [
       "npm ci",
+      "npm list",
       "python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt --no-user",
       "npm run clean",
       "npm run package"
