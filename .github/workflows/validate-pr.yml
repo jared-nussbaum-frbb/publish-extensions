@@ -23,15 +23,3 @@ jobs:
         with:
           python-version: "3.7"
       - run: EXTENSIONS=$(node diff-extensions) node publish-extensions
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: node report-extensions
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: report
-          path: |
-            /tmp/stat.json
-            /tmp/result.md
-      - name: Upload job summary
-        run: cat /tmp/result.md >> $GITHUB_STEP_SUMMARY
