@@ -798,8 +798,10 @@
     "repository": "https://github.com/microsoft/vscode-jupyter",
     "custom": [
       "npm ci",
+      "node --version",
       "python3 -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt --no-user",
       "npm run clean",
+      "node -e  \"const { stripVTControlCharacters } = require('util'); stripVTControlCharacters('test')\"",
       "npm run package"
     ],
     "extensionFile": "ms-toolsai-jupyter-insiders.vsix",
